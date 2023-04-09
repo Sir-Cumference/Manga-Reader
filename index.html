@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <title>Chapter 1</title>
+        <script src="jquery-3.6.0.min.js"></script>
+        <meta http-equiv="content-type" content="text/html charset=utf-8" />
+        <script src="script.js"></script>
+	</head>
+<body style="background: url('background.jpg')!important; margin-top: 0px">
+	<div id="options" style='position: absolute'>
+		<select id='episode' onchange="updateEp()">
+			<option value="1" selected="selected">Episode 1</option>
+			<option value="2">Episode 2</option>
+			<option value="3">Episode 3</option>
+			<option value="4">Episode 4</option>
+			<option value="5">Episode 5</option>
+			<option value="6">Episode 6</option>
+			<option value="7">Episode 7</option>
+			<option value="8">Episode 8</option>
+		</select>
+		<select id='chapter' onchange="updateChap()">
+		</select>
+		<br>
+		<button type="button" id='bgmOn' class='enable bgm'>
+	        Enable BGM
+	    </button>
+	    <button type="button" id='bgmOff' style='display: none' class='disable bgm'>
+	        Disable BGM
+	    </button>
+	    <input type="range" min="0" max="100" value="15" class="slider bgm" id="bgmVol" style='display: none'>
+	    <br>
+		<button type="button" id='sfxOn' class='enable sfx'>
+	        Enable SFX
+	    </button>
+	    <button type="button" id='sfxOff' style='display: none' class='disable sfx'>
+	        Disable SFX
+	    </button>
+	    <input type="range" min="0" max="100" value="12" class="slider sfx" id="sfxVol" style='display: none'>
+	    <br>
+	    <button type="button" id='voiceOn' class='enable voice'>
+	        Enable voices
+	    </button>
+	    <button type="button" id='voiceOff' style='display: none' class='disable voice'>
+	        Disable voices
+	    </button>
+	    <input type="range" min="0" max="100" value="13" class="slider voice" id="voiceVol" style='display: none'>
+		<br>
+	    <button type="button" id='namesOn' style='display: none' class='enable names'>
+	        Enable BGM names
+	    </button>
+	    <button type="button" id='namesOff' style='display: none' class='disable names'>
+	        Disable BGM names
+	    </button>
+	</div>
+	<audio src="assets/umineko-sound/bgm/000.mp3" class="bgm on" loop></audio>
+	<audio src="assets/umineko-sound/bgm/000.mp3" class="bgm off" loop></audio>
+	<audio src="assets/umineko-sound/se/000.mp3" class="sfx off" loop></audio>
+	<audio src="assets/umineko-sound/se/000.mp3" class="sfx off" loop></audio>
+	<audio src="assets/umineko-sound/se/000.mp3" class="sfx off" loop></audio>
+	<audio src="assets/umineko-sound/se/000.mp3" class="sfx off" loop></audio>
+	<audio src="assets/umineko-sound/se/000.mp3" class="sfx off" loop></audio>
+	<audio src="assets/umineko-sound/se/000.mp3" class="voice"></audio>
+	<center><div id='pages'></div></center>
+	<div id="BGMname" style='color: lightblue; left: 30px; bottom: 20px; font-size: 22px; position: fixed; display: none'></div>
+</body>
+</html>
