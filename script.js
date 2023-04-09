@@ -394,7 +394,7 @@ function playSFX(sfx, sfxTracks) {
 			offTracks[i].src = 'assets/umineko-sound/se/' + filteredNewSFX[i] + audioExt
 			offTracks[i].load()
 			if (filteredNewSFX[i].includes("maria_v")) { //Transition Maria's singing
-				offTracks[i].currentTime = continueFrom + 0.2 //Theres a 0.2 second delay between both versions
+				offTracks[i].currentTime = continueFrom + soundDelay*0.2/500 //Theres a delay between both versions
 			}
 			offTracks[i].play()
 			offTracks.eq(i).animate({volume: volume}, soundDelay*3)
